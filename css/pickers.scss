@@ -1,0 +1,81 @@
+$input-addon-padding: 12px 10px;
+$input-addon-bg-color: #f7f7f7;
+$input-addon-border: 1px solid #ccc;
+$input-addon-height: 50px;
+$input-addon-width: 40px;
+@mixin flex-container {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-item-left {
+    flex-grow: 1;
+}
+
+@mixin flex-item-right {
+    background-color: $input-addon-bg-color;
+    padding: $input-addon-padding;
+    border: $input-addon-border;
+    height: $input-addon-height;
+    width: $input-addon-width;
+    box-sizing: border-box;
+}
+
+// /* ************ ICON PICKER ******************/
+.alx-icon-picker {
+    @include flex-container();
+    .left {
+        @include flex-item-left();
+    }
+    .right {
+        @include flex-item-right();
+    }
+    .iconpicker-container {
+        width: 100%;
+    }
+}
+
+.iconpicker-popover {
+    border: 1px solid #ccc;
+}
+
+.iconpicker-popover.popover.bottom>.arrow:after,
+.iconpicker-popover.popover.bottomRight>.arrow:after,
+.iconpicker-popover.popover.bottomLeft>.arrow:after {
+    border-bottom-color: #f7f7f7;
+}
+
+.iconpicker-popover.popover .popover-title input[type=search].iconpicker-search {
+    margin: 0;
+    padding: 8px;
+    width: 90%;
+}
+
+.iconpicker .iconpicker-items {
+    max-height: 148px;
+}
+
+
+/* ************ COLOR PICKER ******************/
+
+.alx-color-picker {
+    .colorpicker-saturation {
+        width: 130px;
+        height: 130px;
+    }
+    .colorpicker-alpha,
+    .colorpicker-hue {
+        width: 30px;
+        height: 130px;
+    }
+}
+
+.colorpicker-component {
+    @include flex-container();
+    .input-text, .input-search {
+        @include flex-item-left();
+    }
+    .input-group-addon {
+        @include flex-item-right();
+    }
+}

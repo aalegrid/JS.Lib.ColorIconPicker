@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/fontawesome-iconpicker.min.css" rel="stylesheet">
+    <link href="css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/pickers.css" rel="stylesheet">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="input-group alx-icon-picker">
+        <input id="AlxIconPicker" data-placement="bottomRight" class="form-control left" value="fas fa-archive" type="search" />
+        <span class="right input-group-addon"></span>
+    </div>
+
+    <div class="alx-color-picker">
+        <div id="AlxColorPicker" class="input-group colorpicker-component">
+            <input id="ColorPickerInput" type="search" value="#00AABB" class="form-control" />
+            <span class="input-group-addon"><i></i></span>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/fontawesome-iconpicker.min.js"></script>
+    <script src="js/bootstrap-colorpicker.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#AlxIconPicker').iconpicker();
+            $('#AlxColorPicker').colorpicker({
+                container: ".alx-color-picker"
+            });
+        });
+    </script>
+</body>
+
+</html>
